@@ -1,0 +1,8 @@
+Similar to the classic dynamic loading behavior, when executing Java programs, the Java Virtual Machine finds and loads classes lazily (it loads the bytecode of a class only when the class is first used). The classpath tells Java where to look in the filesystem for files defining these classes.
+
+The virtual machine searches for and loads classes in this order:
+
+bootstrap classes: the classes that are fundamental to the Java Platform (comprising the public classes of the Java Class Library, and the private classes that are necessary for this library to be functional).
+extension classes: packages that are in the extension directory of the JRE or JDK, jre/lib/ext/
+user-defined packages and libraries
+By default only the packages of the JDK standard API and extension packages are accessible without needing to set where to find them. The path for all user-defined packages and libraries must be set in the command-line (or in the Manifest associated with the Jar file containing the classes).
